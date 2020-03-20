@@ -1,4 +1,4 @@
-@loginTest
+@backofficeLoginTest @skip
 Feature: Fintech Backoffice - Login
 
   I want to login on fintech backoffice

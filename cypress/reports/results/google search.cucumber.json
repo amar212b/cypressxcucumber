@@ -1,0 +1,67 @@
+[
+  {
+    "description": "  I want to search on Google",
+    "keyword": "Feature",
+    "name": "Google - Search",
+    "line": 2,
+    "id": "google---search",
+    "tags": [
+      {
+        "name": "@googleSearchTest",
+        "line": 1
+      }
+    ],
+    "uri": "google search.feature",
+    "elements": [
+      {
+        "id": "google---search;as-a-user,-i-should-be-able-to-successfully-search-on-google-page",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "As a User, I should be able to successfully search on google page",
+        "tags": [
+          {
+            "name": "@googleSearchTest",
+            "line": 1
+          },
+          {
+            "name": "@positiveTesting",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I go to google page",
+            "result": {
+              "status": "passed",
+              "duration": 6234000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I fill in search field with \"damar mustiko aji\"",
+            "result": {
+              "status": "passed",
+              "duration": 3664000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I see the results \"damar\"",
+            "result": {
+              "status": "passed",
+              "duration": 280000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

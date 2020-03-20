@@ -19,7 +19,6 @@
     }
   },
   "scripts": {
-    "clean-cypress": "rm -rf node_modules",
     "clean-reports": "rm -rf cypress/reports/results/*.json cypress/reports/features cypress/reports/index.html",
     "test-webui": "npm run clean-reports & ./node_modules/.bin/cypress-tags run --spec \"cypress/integration/*.feature\" --record --key 1234567890",
     "cypress": "npm run clean-reports & ./node_modules/.bin/cypress-tags run --spec \"cypress/integration/*.feature\"",
