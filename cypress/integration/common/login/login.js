@@ -1,6 +1,5 @@
 import { Then, Given, When } from 'cypress-cucumber-preprocessor/steps'
 
-const data = require('../../../fixtures/data.json')
 const response = require('../../../fixtures/response_status_code.json')
 
 const emailField = 'input[data-testid="email"]'
@@ -12,11 +11,10 @@ Given(`I go to page {string}`, url => {
   cy.visit(url)
 })
 Given(`I go to page backoffice login`, () => {
-  cy.visit(Cypress.env('host'))
+  cy.visit(Cypress.env('BACKOFFICE_URL'))
 })
 Then(`I see {string} in the title`, title => {
   cy.title().should('include', title)
-  cy.log(Cypress.env('host'))
 })
 Then(`I fill in email field using {string}`, email => {
   cy.get(emailField).type(email)
@@ -29,9 +27,8 @@ When(`I click button login`, () => {
   cy.route('POST', '/auth/v1/login').as('login')
   cy.get(buttonLogin).click()
   cy.wait('@login')
-  cy.get('@login').then(function(xhr) {
+  cy.get('@login').then(xhr => {
     expect(xhr.method).to.eq('POST')
-    cy.log(xhr.status)
   })
 })
 Then(`I see the error message {string}`, message => {
@@ -40,13 +37,13 @@ Then(`I see the error message {string}`, message => {
   })
 })
 Then(`I login using admin account`, () => {
-  cy.get(emailField).type(data.emailAdmin)
-  cy.get(passwordField).type(data.passwordAdmin)
+  cy.get(emailField).type(Cypress.env('BACKOFFICE_ADMIN_EMAIL'))
+  cy.get(passwordField).type(Cypress.env('BACKOFFICE_ADMIN_PASSWORD'))
   cy.server()
   cy.route('POST', '/auth/v1/login').as('login')
   cy.get(buttonLogin).click()
   cy.wait('@login')
-  cy.get('@login').then(function(xhr) {
+  cy.get('@login').then(xhr => {
     expect(xhr.method).to.eq('POST')
     if (xhr.status === response.successOk) {
       expect(xhr.status).to.eq(response.successOk)

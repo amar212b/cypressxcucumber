@@ -1,33 +1,46 @@
-const report = require('multiple-cucumber-html-reporter');
-const os = require("os");
-const hostname = os.hostname();
-const platform = os.platform();
-const release = os.release();
-const datetime = new Date();
+const report = require('multiple-cucumber-html-reporter')
+
+const os = require('os')
+
+const deviceName = os.platform()
+
+let deviceIcon
+
+if (deviceName === 'darwin') {
+  deviceIcon = 'osx'
+} else if (deviceName === 'win32') {
+  deviceIcon = 'windows'
+} else if (deviceName === 'linux') {
+  deviceIcon = 'linux'
+}
+
+const d = new Date()
+const date = `${d.getDate()}-${d.getMonth() +
+  1}-${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}`
 
 report.generate({
   jsonDir: 'cypress/reports/results/',
   reportPath: 'cypress/reports/',
+  openReportInBrowser: false,
+  screenshotsDirectory: 'cypress/screenshots',
+  storeScreenshots: true,
   metadata: {
     browser: {
       name: 'chrome',
-      version: '79',
+      version: '80',
     },
-    device: hostname,
+    device: os.hostname(),
     platform: {
-      name: 'osx',
-      version: '10.15.2',
+      name: deviceIcon,
+      version: os.release(),
     },
   },
   customData: {
     title: 'Run info',
     data: [
-      { label: 'Project', value: 'Custom project' },
-      { label: 'Device', value: hostname },
-      { label: 'Platform', value: platform },
-      // { label: 'Release', value: '1.2.3' },
-      // { label: 'Cycle', value: 'B11221.34321' },
-      { label: 'Date', value: datetime }
+      { label: 'Apps', value: 'Fintech Backoffice' },
+      { label: 'Release', value: '-' },
+      { label: 'Date Time', value: date },
     ],
   },
 })

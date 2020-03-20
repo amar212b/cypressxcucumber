@@ -1,36 +1,13 @@
 {
-  "name": "fintech-backoffice",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "clean-reports": "rm -fr cypress/reports/results/*.json cypress/reports/features cypress/reports/index.html",
-    "cypress-local": "npm run clean-reports & ./node_modules/.bin/cypress-tags run --spec \"cypress/integration/*.feature\"",
-    "cypress": "npm run clean-reports & ./node_modules/.bin/cypress-tags run --spec \"cypress/integration/*.feature\"",
-    "cypress-ui": "./node_modules/.bin/cypress open",
-    "report": "node cypress/cypress_report.js",
-    "open-report": "open 'cypress/reports/index.html'",
-    "lint": "eslint --fix --fix-type suggestion . --fix-type problem ."
-  },
+  "name": "cypress-x-cucumber",
+  "version": "1.0.0",
+  "description": "boilerplate automation testing on webui using cypress and cucumber",
+  "main": "index.js",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.15.0",
-    "@typescript-eslint/parser": "^2.15.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-node": "^4.0.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "multiple-cucumber-html-reporter": "^1.13.2",
-    "prettier": "^1.19.1",
-    "cucumber-html-reporter": "^5.1.0",
-    "cypress": "^3.8.3",
+    "cypress": "^4.2.0",
     "cypress-cucumber-preprocessor": "^2.0.1",
-    "cypress-file-upload": "^3.5.3",
-    "cypress-select-tests": "^1.4.1",
-    "eslint-plugin-cypress": "^2.8.1"
+    "dotenv": "^8.2.0",
+    "multiple-cucumber-html-reporter": "^1.16.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
@@ -40,5 +17,24 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
-  }
+  },
+  "scripts": {
+    "clean-cypress": "rm -rf node_modules",
+    "clean-reports": "rm -rf cypress/reports/results/*.json cypress/reports/features cypress/reports/index.html",
+    "test-webui": "npm run clean-reports & ./node_modules/.bin/cypress-tags run --spec \"cypress/integration/*.feature\" --record --key 1234567890",
+    "cypress": "npm run clean-reports & ./node_modules/.bin/cypress-tags run --spec \"cypress/integration/*.feature\"",
+    "cypress-ui": "./node_modules/.bin/cypress open",
+    "reports": "node cypress/cypress_report.js",
+    "open-reports": "open 'cypress/reports/index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damarmustiko/cypressxcucumber.git"
+  },
+  "author": "damar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damarmustiko/cypressxcucumber/issues"
+  },
+  "homepage": "https://github.com/damarmustiko/cypressxcucumber#readme"
 }

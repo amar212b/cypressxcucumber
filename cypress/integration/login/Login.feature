@@ -8,8 +8,18 @@ Feature: Fintech Backoffice - Login
     Given I go to page backoffice login
     Then I see "Login | Fintech Backoffice" in the title
     Then I login using admin account
-    Then I see the dashboard backoffice message "Welcome to Fintech Backoffice"
+    Then I click button logout
 
+  @negativeTesting
+  Scenario: Login using invalid account
+    Given I go to page backoffice login
+    Then I see "Login | Fintech Backoffice" in the title
+    Then I fill in email field using "xxx@ralali.com"
+    Then I fill in password field using "123456"
+    When I click button login
+    Then I see the error message "User not found"
+
+  @negativeTesting
   Scenario: Login using wrong password
     Given I go to page backoffice login
     Then I see "Login | Fintech Backoffice" in the title
