@@ -9,8 +9,10 @@ Di line pertama kita import terlebih dahulu module `cypress-cucumber-preprocesso
 import { Then, When } from 'cypress-cucumber-preprocessor/steps'
 ```
 
-Define element yang diperlukan pada step, dengan cara buka browser dan akses halaman yang ingin dibuat automation testing. 
+Kemudian Define element yang diperlukan pada step, dengan cara buka browser dan akses halaman yang ingin dibuat automation testing. 
 Lakukan step-step secara manual testing, dan inspect element yang diberikan action.
+
+<img src="img/inspect_element.gif" width="800"/>
 
 Contoh kita akan membuat automation testing untuk fitur search, maka akses halaman yang ada fitur tersebut. Buka inspect element pada komponen atau field pencarian.
 Kemudian cari attribute html yang se-unique mungkin, dikasus ini kita ambil attribute html `name` pada tag html input yang membangun sebuah kolom pencarian tersebut.
