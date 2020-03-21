@@ -1,4 +1,4 @@
-### [BACK](./)
+### [Back](./)
 
 # Step Definition
 
@@ -57,3 +57,5 @@ Then(`I see the search results with keyword {string}`, keyword => {
   })
 })
 ```
+
+## [How to write step](Write_Step.md)
