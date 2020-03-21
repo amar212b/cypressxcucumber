@@ -24,31 +24,6 @@ Feature: Ralali Website - Search
 ```
 
 ## Step Definition
-File step menerjemahkan dari format feature ke script code, yang nanti meminta cypress menjalankan fungsi sesuai perintah yang sudah kita define.
-
-```js
-import { Then, When } from 'cypress-cucumber-preprocessor/steps'
-
-const searchField = 'input[name="search"]'
-const thumbnail = 'div[class="thumbnail-container"';
-
-When(`I search product using keyword {string}`, keyword => {
-  cy.server()
-  cy.route('GET', '/home/quick-search').as('search')
-  cy.get(searchField)
-    .type(keyword)
-    .type('{enter}')
-  cy.wait('@search')
-  cy.get('@search').then(xhr => {
-    expect(xhr.method).to.eq('GET')
-  })
-})
-
-Then(`I see the search results with keyword {string}`, keyword => {
-  cy.get(thumbnail).should(element => {
-    expect(element.text()).to.contain(keyword)
-  })
-})
-```
+File step menerjemahkan dari format feature ke script code, yang nanti meminta cypress menjalankan fungsi sesuai perintah yang sudah kita define. File disimpan dengan ekstensi .js.
 
 ## [Step Definition Details](Step_Definition.md)
