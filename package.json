@@ -19,7 +19,7 @@
     }
   },
   "scripts": {
-    "clean-reports": "rm -rf cypress/reports/results/*.json cypress/reports/features cypress/reports/index.html",
+    "clean-reports": "rm -rf cypress/reports/results/*.json cypress/reports/features cypress/reports/index.html cypress/reports/* cypress/screenshots/* cypress/videos/*",
     "test-webui": "npm run clean-reports & ./node_modules/.bin/cypress-tags run --spec \"cypress/integration/*.feature\" --record --key 1234567890",
     "cypress": "npm run clean-reports & ./node_modules/.bin/cypress-tags run --spec \"cypress/integration/*.feature\"",
     "cypress-ui": "./node_modules/.bin/cypress open",
