@@ -3,6 +3,7 @@
 <img src="docs/img/cypress_cucumber_logo.png" width="500"/>
 
 > Cypress is a next generation front end testing tool built for the modern web. https://www.cypress.io/
+
 > Cucumber is a software tool used by computer programmers that supports behavior-driven development (BDD). Central to the Cucumber BDD approach is its plain language parser called Gherkin. https://cucumber.io/
 
 ### Prerequisites:
@@ -23,7 +24,7 @@ $ cp .env.example .env
 ### Data test (account testing, etc..)
 Go to cypress/data/data_test.json
 
-### How to Run:
+## How to Run:
 
 - use `test-webui` to upload the report on cypress dashboard
 - use `cypress` for local testing (not uploading the report)
@@ -41,4 +42,6 @@ e.g
 $ npm run cypress -- -e TAGS='@ralaliSearchTest'
 ```
 
-### [How to write](docs/)
+## [How to write](docs/)
+
+## [How to generate report](docs/Report.md)
