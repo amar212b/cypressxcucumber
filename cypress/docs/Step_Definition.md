@@ -24,8 +24,7 @@ Given(`I go to ralali website page`, () => {
 
 ## Private
 Dan Private hanya di konsumsi untuk satu feature saja, file juga disimpan dalam folder yang sama dengan feature tersebut.
-Contoh stepnya pada pengujian search berikut
-Nama file `ralali/search.feature`
+Contoh step pada Search Feature `ralali/search.feature`
 ```gherkin
     When I search product using keyword "power bank"
     Then I see the search results with keyword "power bank"
