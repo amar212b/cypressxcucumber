@@ -12,6 +12,8 @@ Didalam directory integeration kita mempunyai 2 tipe file:
 Feature merupakan bahasa bisnis yang kita gunakan untuk menulis tes dengan cara yang mudah dibaca oleh manusia.
 Penulisan test sesuai dengan testcase yang kita buat untuk manual testing. Berisi scenario, dan step-step nya yang mudah dipahami.
 
+Contoh kita membuat scenario test untuk pencarian product dengan nama `search.feature` dan disimpan didalam folder `integration/ralali/search.feature`
+
 ```gherkin
 @ralaliSearchTest
 Feature: Ralali Website - Search
