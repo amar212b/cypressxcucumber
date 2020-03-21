@@ -36,12 +36,16 @@ $ npm run cypress -- -e TAGS=''
 $ npm run cypress -- -e TAGS='not @skip'
 $ npm run cypress -- -e TAGS='@tagNameScenario'
 $ npm run cypress -- -e TAGS='' --browser chrome
-$ npm run cypress-ui
 ```
 
 e.g
 ```sh
 $ npm run cypress -- -e TAGS='@ralaliSearchTest'
+```
+
+if you want launch the browser
+```sh
+$ npm run cypress -- -e TAGS='@ralaliSearchTest' --browser chrome
 ```
 
 ## [How to write](docs/)
