@@ -36,4 +36,9 @@ $ npm run cypress -- -e TAGS='' --browser chrome
 $ npm run cypress-ui
 ```
 
+e.g
+```sh
+$ npm run cypress -- -e TAGS='@ralaliSearchTest'
+```
+
 ### [How to write](docs/)
