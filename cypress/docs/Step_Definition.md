@@ -13,7 +13,7 @@ Contoh untuk step
 ```gherkin
     Given I go to ralali website page
 ```
-Sudah di define pada file `common/ralali/home.js`
+Sudah di define pada file `integration/common/ralali/home.js`
 ```js
 import { Given } from 'cypress-cucumber-preprocessor/steps'
 
