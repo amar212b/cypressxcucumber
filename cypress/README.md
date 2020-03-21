@@ -35,3 +35,5 @@ $ npm run cypress -- -e TAGS='@tagNameScenario'
 $ npm run cypress -- -e TAGS='' --browser chrome
 $ npm run cypress-ui
 ```
+
+### [How to write](docs/)
