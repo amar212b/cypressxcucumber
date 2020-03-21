@@ -2,6 +2,7 @@
 
 ### How to write step
 
+Buat file di `integration/ralali/search/search.js`
 Di line pertama kita import terlebih dahulu module `cypress-cucumber-preprocessor/steps`
 
 ```js
@@ -96,3 +97,5 @@ Then(`I see the search results with keyword {string}`, keyword => {
   })
 })
 ```
+
+## [How to run](../)
