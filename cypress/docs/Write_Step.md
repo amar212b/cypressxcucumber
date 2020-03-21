@@ -56,17 +56,17 @@ Berfungsi jika kita menemui kendala pada komponen button pencarian tidak ada att
 
 Selanjutnya, didalam feature kita mempunya step untuk memastikan hasil pencarian ditemukan. Maka kita perlu membuat step lagi sebagai berikut.
 
+Tambahkan komponen yang digunakan untuk proses assertion.
+```js
+const searchField = 'input[name="search"]'
+const thumbnail = 'div[class="thumbnail-container"';
+```
+
+Lalu stepnya.
 ```js
 Then(`I see the search results with keyword {string}`, keyword => {
   cy.get(thumbnail).should(element => {
     expect(element.text()).to.contain(keyword)
   })
 })
-```
-
-dan jangan lupa define juga element yang diperlukan (line atas).
-
-```js
-const searchField = 'input[name="search"]'
-const thumbnail = 'div[class="thumbnail-container"';
 ```
