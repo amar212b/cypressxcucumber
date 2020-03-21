@@ -38,7 +38,7 @@ report.generate({
   customData: {
     title: 'Run info',
     data: [
-      { label: 'Apps', value: 'Fintech Backoffice' },
+      { label: 'Apps', value: 'Boilerplate WEBUI Automation Testing' },
       { label: 'Release', value: '-' },
       { label: 'Date Time', value: date },
     ],
