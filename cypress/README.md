@@ -45,3 +45,5 @@ $ npm run cypress -- -e TAGS='@ralaliSearchTest'
 ## [How to write](docs/)
 
 ## [How to generate report](docs/Report.md)
+
+## [How to add env](docs/Env.md)
