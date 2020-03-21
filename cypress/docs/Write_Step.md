@@ -71,7 +71,7 @@ Then(`I see the search results with keyword {string}`, keyword => {
 })
 ```
 
-Penulisan file step selengkapnya berikut, dan disimpan didalam folder `integration/ralali/search/search.js` dengan sifat Private step
+Penulisan file step selengkapnya berikut, dan disimpan didalam folder `integration/ralali/search/search.js` dengan sifat Private step.
 ```js
 import { Then, When } from 'cypress-cucumber-preprocessor/steps'
 
