@@ -23,14 +23,14 @@ Given(`I go to ralali website page`, () => {
 ```
 
 ## Private
-Dan Private hanya di konsumsi untuk satu feature saja, file juga disimpan dalam folder yang sama dengan feature tersebut.
-Contoh step pada Search Feature `ralali/search.feature`
+Private hanya di konsumsi untuk satu feature saja, file juga disimpan dalam folder yang sama dengan feature tersebut.
+Contoh step pada Search Feature `integration/ralali/search.feature`
 ```gherkin
     When I search product using keyword "power bank"
     Then I see the search results with keyword "power bank"
 ```
 
 dan file step dalam folder yang sama dengan feature, serta penamaan folder/file disarankan sama juga.
-`ralali/search/search.js`
+`integration/ralali/search/search.js`
 
 ## [How to write step](Write_Step.md)
