@@ -54,7 +54,7 @@ When(`I search product using keyword {string}`, keyword => {
 Kenapa difungsi `.type(keyword)` ditambahkan `.type('{enter}')`? ini hanya menyederhakan step tanpa perlu click button pencarian. 
 Berfungsi jika kita menemui kendala pada komponen button pencarian tidak ada attribute yg unique.
 
-Selanjutnya, didalam feature kita mempunya step untuk memastikan hasil pencarian ditemukan. Maka kita perlu membuat step lagi sebagai berikut.
+Selanjutnya, didalam feature kita mempunya step untuk memastikan hasil pencarian ditemukan `I see the search results with keyword "power bank"`. Maka kita perlu membuat step lagi sebagai berikut.
 
 Tambahkan komponen yang digunakan untuk proses assertion.
 ```js
