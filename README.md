@@ -21,8 +21,10 @@ $ npm install
 $ cp .env.example .env
 ```
 
-### Data test (account testing, etc..)
-Go to cypress/data/data_test.json
+### Data Test
+All data test for automation testing
+
+Go to `cypress/data/`
 
 ### How to Run:
 
