@@ -22,7 +22,7 @@ $ cp .env.example .env
 ```
 
 ### Data Test 
-For all data account testing, etc..
+All data test for automation testing
 
 Go to `cypress/data/`
 
