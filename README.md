@@ -8,7 +8,7 @@
 
 ### Prerequisites:
 
-- node version ^v12.0.0
+- node version `^v12.0.0`
 - Install Node.js and npm, we will use npm to install or yarn
 - Cypress x Cucumber for automation testing
 
