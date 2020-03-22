@@ -18,8 +18,6 @@ module.exports = (on, config) => {
 
   config.env = config.env || {}
   config.env.BACKOFFICE_URL = process.env.BACKOFFICE_URL
-  config.env.BACKOFFICE_ADMIN_EMAIL = process.env.BACKOFFICE_ADMIN_EMAIL
-  config.env.BACKOFFICE_ADMIN_PASSWORD = process.env.BACKOFFICE_ADMIN_PASSWORD
   config.env.GOOGLE_URL = process.env.GOOGLE_URL
   config.env.RALALI_WEB_URL = process.env.RALALI_WEB_URL
   config.env.EMAIL_BUYER_RALALI = process.env.EMAIL_BUYER_RALALI

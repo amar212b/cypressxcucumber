@@ -5,7 +5,8 @@ const passwordField = 'input[name="password"]'
 const msgFail = 'span[ng-bind-html="login.msgfail"]'
 
 Given(`I go to Ralali login page`, () => {
-    cy.visit(Cypress.env('RALALI_WEB_URL')+'/login')
+  cy.clearCookies()
+  cy.visit(Cypress.env('RALALI_WEB_URL')+'/login')
 })
 
 Then(`I go to login using buyer account`, () => {

@@ -12,6 +12,7 @@ Given(`I go to page {string}`, url => {
 })
 
 Given(`I go to page backoffice login`, () => {
+  cy.clearCookies()
   cy.visit(Cypress.env('BACKOFFICE_URL'))
 })
 

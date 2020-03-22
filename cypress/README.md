@@ -65,3 +65,5 @@ npm run cypress-ui
 - https://docs.cypress.io/guides/getting-started/installing-cypress.html
 
 And then open the project
+
+<img src="docs/img/cypress_desktop_run.gif" width="800"/>

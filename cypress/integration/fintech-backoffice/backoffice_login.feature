@@ -3,13 +3,6 @@ Feature: Fintech Backoffice - Login
 
   I want to login on fintech backoffice
 
-  @positiveTesting
-  Scenario: Login using valid account
-    Given I go to page backoffice login
-    Then I see "Login | Fintech Backoffice" in the title
-    Then I login using admin account
-    Then I click button logout
-
   @negativeTesting
   Scenario: Login using invalid account
     Given I go to page backoffice login
